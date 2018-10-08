@@ -1,3 +1,4 @@
+// Strict mode changes previously accepted "bad syntax" into real errors.
 'use strict';
 
 const e = React.createElement;
@@ -22,7 +23,7 @@ class NameForm extends React.Component {
   }
 
   render() {
-    return 
+    return (
       <form onSubmit={this.handleSubmit}>
         <label>
           Name:
@@ -30,7 +31,7 @@ class NameForm extends React.Component {
         </label>
         <input type="submit" value="Submit" />
       </form>
-   
+    );
   }
 }
 

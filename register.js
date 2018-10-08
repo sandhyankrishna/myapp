@@ -64,7 +64,6 @@ const style = {
 };
 /* export default Register;
 We are taking firstname,lastname,email and password from user and storing them in relevant state variables. We need to send these details to backend on click of submit button which is executed by handleClick function on line 52.
-
 Let us now define handleClick function as follows: */
 
 import Login from './Login'; 
