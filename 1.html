@@ -5,6 +5,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="x.css">
  
 </head>
@@ -58,7 +60,7 @@
         
         )
     
-    
+  
   }
 })
 var Signup = React.createClass({
@@ -86,9 +88,9 @@ var Signup = React.createClass({
             )
       }
 })
+
 var Login = React.createClass({
      
-
       render:function(){
         
         
@@ -106,9 +108,31 @@ var Login = React.createClass({
                   </div>
               
             )
-      }
+     
+ 
+  }
 })
+
+$("form").on("submit", function(event){
+          // stops the default action of an element from happening 
+      event.preventDefault();
+        // let allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used 
+    let Firstname             = $("#inputField1").val();
+    let Lastname             = $("#inputField2").val();
+    let email                = $("#inputField3").val();
+     let password             = $("#inputField4").val();
+     let passwordConfirmation = $("#inputField5").val();
+
+// Save data to the current local store
+localStorage.setItem("First Name", FirstName);
+localStorage.setItem("last Name", Lastname);
+localStorage.setItem("email", email);
+localStorage.setItem("password", password);
+localStorage.setItem("confirm Password", ConfirmPassword);
+});
+ 
 ReactDOM.render(<Parent/>,document.getElementById("space"))
+
 </script>
 </body>
 </html>
